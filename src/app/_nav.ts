@@ -1,4 +1,5 @@
-import { INavData } from '../../dist/@coreui/angular';
+import { INavData } from '@coreui/angular';
+
 
 export const navItems: INavData[] = [
   {
