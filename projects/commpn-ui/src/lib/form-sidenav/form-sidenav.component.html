@@ -1,6 +1,5 @@
-<app-sidebar [fixed]="true" [display]="'lg'" [minimized]="minimized" #sidebar
-  (minimizedChange)="toggleMinimize($event)">
-  <app-sidebar-nav [navItems]="navItems"></app-sidebar-nav>
+<app-sidebar [fixed]="true" [display]="'lg'" [minimized]="minimized" #sidebar (minimizedChange)="toggleMinimize($event)">
+  <app-sidebar-nav [navItems]="navItems" ></app-sidebar-nav>
   <app-sidebar-minimizer></app-sidebar-minimizer>
 </app-sidebar>
 <!-- Main content -->

@@ -1,3 +1,4 @@
+import { CommpnUiModule } from './../../projects/commpn-ui/src/lib/commpn-ui.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -20,16 +21,14 @@ const APP_CONTAINERS = [
   DefaultLayoutComponent
 ];
 
-import {
-  AppAsideModule,
-  AppBreadcrumbModule,
-  AppHeaderModule,
-  AppFooterModule,
-  AppSidebarModule,
-} from '../../dist/@coreui/angular';
+
 
 // Import routing module
 import { AppRoutingModule } from './app.routing';
+
+import { AppAsideModule, AppBreadcrumbModule, AppFooterModule, AppHeaderModule, AppSidebarModule } from '@coreui/angular';
+
+
 
 
 @NgModule({
@@ -41,18 +40,19 @@ import { AppRoutingModule } from './app.routing';
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
     AppHeaderModule,
-
     AppSidebarModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    CommpnUiModule
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
+
   ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
