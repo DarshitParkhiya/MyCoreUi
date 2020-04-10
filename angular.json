@@ -164,6 +164,46 @@
           }
         }
       }
+    },
+    "commpn-ui": {
+      "projectType": "library",
+      "root": "projects/commpn-ui",
+      "sourceRoot": "projects/commpn-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/commpn-ui/tsconfig.lib.json",
+            "project": "projects/commpn-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/commpn-ui/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/commpn-ui/src/test.ts",
+            "tsConfig": "projects/commpn-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/commpn-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/commpn-ui/tsconfig.lib.json",
+              "projects/commpn-ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "coreui",

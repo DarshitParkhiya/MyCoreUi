@@ -21,6 +21,10 @@
     "paths": {
       "@coreui/angular": [
         "dist/coreui/angular"
+      ],
+      "commpn-ui": [
+        "dist/commpn-ui/commpn-ui",
+        "dist/commpn-ui"
       ]
     }
   },

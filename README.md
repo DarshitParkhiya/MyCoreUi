@@ -1,160 +1,189 @@
-# [@coreui/angular](https://coreui.io/angular)
+# Fathom Web
 
-[![npm package][npm-coreui-angular-badge-latest]][npm-coreui-angular] 
-[![NPM downloads][npm-coreui-angular-download]][npm-coreui-angular]
-[![npm-coreui-angular-next][npm-coreui-angular-badge-next]][npm-coreui-angular]  
-[![@coreui coreui](https://img.shields.io/badge/@coreui%20-coreui-lightgrey.svg?style=flat-square)](https://github.com/coreui/coreui)
-[![npm package][npm-coreui-badge]][npm-coreui]
-[![NPM downloads][npm-coreui-download]][npm-coreui]    
-![angular](https://img.shields.io/badge/angular-^9.0.0-lightgrey.svg?style=flat-square&logo=angular)  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
-[npm-coreui-angular]: https://www.npmjs.com/package/@coreui/angular  
-[npm-coreui-angular-badge-latest]: https://img.shields.io/npm/v/@coreui/angular/latest?style=flat-square&color=red  
-[npm-coreui-angular-badge-next]: https://img.shields.io/npm/v/@coreui/angular/next?style=flat-square&color=red  
-[npm-coreui-angular-download]: https://img.shields.io/npm/dm/@coreui/angular.svg?style=flat-square  
-[npm-coreui-angular-next]: https://img.shields.io/npm/v/@coreui/angular/next?style=flat-square
-[npm-coreui]: https://www.npmjs.com/package/@coreui/coreui
-[npm-coreui-badge]: https://img.shields.io/npm/v/@coreui/coreui.png?style=flat-square
-[npm-coreui-download]: https://img.shields.io/npm/dm/@coreui/coreui.svg?style=flat-square
+## Nrwl Extensions for Angular (Nx)
 
-# CoreUI for Angular 9 - Free WebApp UI Kit built on top of Bootstrap 4 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%20Bootstrap%204%20Admin%20Template%20&url=https://coreui.io&hashtags=,admin,template,dashboard,panel,free,angular,react,vue)
+Nx is an open source toolkit for enterprise Angular applications.
 
-Please help us on [Product Hunt](https://www.producthunt.com/posts/coreui-open-source-bootstrap-4-admin-template-with-angular-2-react-js-vue-js-support) and [Designer News](https://www.designernews.co/stories/81127). Thanks in advance!
+Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
 
-Curious why I decided to create CoreUI? Please read this article: [Jack of all trades, master of none. Why Bootstrap Admin Templates suck.](https://medium.com/@lukaszholeczek/jack-of-all-trades-master-of-none-5ea53ef8a1f#.7eqx1bcd8)
+## Quick Start & Documentation
 
-CoreUI is an Open Source UI Kit built on top of Bootstrap 4. CoreUI is the fastest way to build modern dashboard for any platforms, browser or device. A complete Dashboard and WebApp UI Kit that allows you to quickly build eye-catching, high-quality, high-performance responsive applications using your framework of choice.
+[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
 
-## Table of Contents
+## Why Monorepo ?
+Working with multiple applications and libraries is difficult. From Google to Facebook, Uber, Twitter and more, a good amount of large software companies handle this challenge by taking a monorepo approach. And they have been doing so for years. These are some of the advantages this approach provides:
 
-* [Templates](#templates)
-* [Admin Templates built on top of CoreUI Pro](#admin-templates-built-on-top-of-coreui-pro)
-* [Prerequisites](#prerequisites)
-* [Installation](#coreui-installation)
-* [Usage](#usage)
-* [What's included](#whats-included)
-* [Documentation](#documentation)
-* [Contributing](#contributing)
-* [Versioning](#versioning)
-* [Creators](#creators)
-* [Community](#community)
-* [License](#license)
-* [Support CoreUI Development](#support-coreui-development)
+- Everything at that current commit works together. Changes can be - verified across all affected parts of the organization.
+- Easy to split code into composable modules
+- Easier dependency management
+- One toolchain setup
+- Code editors and IDEs are "workspace" aware
+- Consistent developer experience
 
-## Templates
+[Click here to read more.](https://nx.dev/angular/fundamentals/monorepos-automation)
 
-* [CoreUI Free Angular Admin Template](https://github.com/coreui/coreui-free-angular-admin-template)
-* 💪  [CoreUI Pro Angular Admin Template](https://coreui.io/pro/angular/)
+## Dependencies
+- Install latest version of nodejs
+- Run this command in cmd: npm install -g @angular/cli
+- Run this command in cmd: npm install -g @nrwl/schematics
 
-## Admin Templates built on top of CoreUI Pro
+## IDE plugins
+For correct code formatting and same code convention, following vs code plugins should be installed:
+ - https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig - plugin for EditorConfig support in vs code.
+ - https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin - plugin for TSLint hints in vs code.
+ - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode - configurable plugin for code formatting in vs code.
 
-| CoreUI Pro | Prime | Root | Alba | Leaf |
-| --- | --- | --- | --- | --- |
-| [![CoreUI Pro Admin Template](https://coreui.io/assets/img/example-coureui.jpg)](https://coreui.io/pro/angular/)| [![Prime Admin Template](https://coreui.io/assets/img/responsive-prime.png)](https://coreui.io/admin-templates/angular/prime/?support=1)| [![Root Admin Template](https://coreui.io/assets/img/responsive-root.png)](https://coreui.io/admin-templates/angular/root/?support=1)| [![Alba Admin Template](https://coreui.io/assets/img/responsive-alba.png)](https://coreui.io/admin-templates/angular/alba/?support=1)| [![Leaf Admin Template](https://coreui.io/assets/img/responsive-leaf.png)](https://coreui.io/admin-templates/angular/leaf/?support=1)
+## Used Third Party Libraries
+- [Kendo UI for Angular
+](https://www.telerik.com/kendo-angular-ui), which we will migrate from it slowly to other open source frameworks.
 
-#### Prerequisites
-Before you begin, make sure your development environment includes `Node.js®` and an `npm` package manager.
+- [eCharts](echarts.apache.org/examples/en/), as a charting library.
 
-###### Node.js
-Angular 9 requires `Node.js` version 10.13 or later.
+- [ngx-bootstrap](ngx-bootstrap), as a UI components library.
 
-- To check your version, run `node -v` in a terminal/console window.
-- To get `Node.js`, go to [nodejs.org](https://nodejs.org/).
+- Many more are also used, which you can view by studying the `package.json` file. So, please make sure you use the already existing libraies and do not introduce anything new unless it's needed and there's nothing that does what it do and let your team leader know about it.
 
-###### Angular CLI
-Install the Angular CLI globally using a terminal/console window.
-```bash
-npm install -g @angular/cli
-```
+## Theme
 
-##### Update to Angular 9
-see: [https://update.angular.io](https://update.angular.io)
+There's a theme library in the project which is located in libs/theme, it's based on [bootstrap4](https://getbootstrap.com/) and [coreUI](https://coreui.io/angular/demo)
 
-## CoreUI Installation
+You might want to visit [coreUI](https://coreui.io/angular/demo) demob website to know what styles you could use on which controllers.
 
-Several options are available:
+## Importing the theme style
+In your app's styles.scss file, you can improt it as follows:
 
-### Clone repo
+ `@import '~@fathom/theme/src/styles/all';`
 
-``` bash
-$ git clone https://github.com/coreui/coreui-angular.git
-```
+If you wanted to customize the look and feel of the whole app, then you have to override the SCSS variables BEFORE importing the styles as the scss engine will take the first defined variables and ignore anything after that you import.
 
-### NPM
+For the full list of styles variables, please go to:
+`libs\theme\src\styles\core\_variables.scss`
 
-``` bash
-$ npm install @coreui/angular --save
-```
+Be careful, don't change the variables in the lib as that will affect all the apps, instead overwrite them in your app as mentioned above.
 
-### Yarn
+## Existing Fathom libraries
 
-``` bash
-$ yarn add @coreui/angular
-```
+The libraries we created inside `libs` folder are there so that they can be re-used by any other team member. Please study the existing libraries and make use of them.
 
-## Usage
+For example:
 
-### CSS
+In `libs/common` we have many helper functions that could be useful to you.
 
-Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
 
-``` html
-<link rel="stylesheet" href="node_modules/@coreui/coreui/dist/css/coreui.min.css">
-```
+## Using Shared Assets across apps
 
-## What's included
+There is a shared assets lib folder in libs, to make any folder in the assets lib folder available for your angular app, you need to modify your app's object configuration in angular.json file and include that folder path to your assets property.
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+Example, to include 'assets/BaseControlsIcons', we do it this way:
 
-```
-coreui/
-├── build/
-├── dist/
-├── scripts/
-└── src/
-```
+`
+...
 
-## Documentation
+assets: [
+    ...,
+    ..., 
+    { "glob": "**/*", "input": "libs/assets/BaseControlsIcons/", "output": "./assets/BaseControlsIcons/" }
+]
+...
+`
 
-The documentation for the CoreUI Free Bootstrap Admin Template is hosted at our website [CoreUI](https://coreui.io/angular/)
+This way, BaseControlsIcons folder will be available to your app when built and you can reference it in your app as "assets/BaseControlsIcons/FSFilter.png" for example.
 
-## Contributing
+Fore more information, please visit:
+https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/asset-configuration.md#project-assets
 
-Please read through our [contributing guidelines](https://github.com/coreui/coreui-angular/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+## Development server
 
-Editor preferences are available in the [editor config](https://github.com/coreui/coreui-angular/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+Run `ng serve xx` where xx is your app name, for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Versioning
+To develop againest the cloud, use this:
+`ng serve --app=myapp --configuration=devCloud` where devCloud is environment variables file in environments folder of the project.
 
-For transparency into our release cycle and in striving to maintain backward compatibility,CoreUI Free Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+Mostly now all apps are configured to be developed against the cloud so you don't need to run any web api in your local machine.
 
-See [the Releases section of our project](https://github.com/coreui/coreui-angular/releases) for changelogs for each release version.
+There's an easier way to run your application which is using make.
 
-## Creators
+You can run `make xx-serve` where xx is your app name, examples:
+- `make wells-serve`
+- `make pipelines-serve`
 
-**Łukasz Holeczek**
+## Generate your first application
 
-* <https://twitter.com/lukaszholeczek>
-* <https://github.com/mrholek>
+Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
 
-**Andrzej Kopański**
+Let's say you want to generate a new app called 'productivity-web' and you want it to be in the path apps/productivity/web, then you run the following command:
 
-* <https://github.com/xidedix>
+`ng generate app web --directory=productivity --style=scss`
 
-## Community
+The result will be apps/productivity/web
 
-Get updates on CoreUI's development and chat with the project maintainers and community members.
+For more options, type: `ng generate app --help`
 
-- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
-- Read and subscribe to [CoreUI Blog](https://coreui.io/blog/).
+## Creating a Lib
+Adding new libs to an Nx Workspace is done by using the Angular CLI generate command, just like adding a new app.
+`ng generate lib mylib`
 
-## Copyright and license
+Run `ng generate lib --help --style=scss` to see the list of available options:
 
-copyright 2017-2020 creativeLabs Łukasz Holeczek. Code released under [the MIT license](https://github.com/coreui/coreui-angular/blob/master/LICENSE).
-There is only one limitation you can't can’t re-distribute the CoreUI as stock. You can’t do this if you modify the CoreUI. In past we faced some problems with persons who tried to sell CoreUI based templates.
+To generate a component for your lib, run the following:
+`ng generate component header --project=mylib`
 
-## Support CoreUI Development
+As you can see we have provided --project parameter to let the cli know where we want the component to be.
 
-CoreUI is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support development by donating on [PayPal](https://www.paypal.me/holeczek), buying [CoreUI Pro Version](https://coreui.io/pro) or buying one of our [premium admin templates](https://genesisui.com/?support=1).
+Now, the component will be generated in this directory:
+`libs\mylib\src\lib\header`
 
-As of now I am exploring the possibility of working on CoreUI fulltime - if you are a business that is building core products using CoreUI, I am also open to conversations regarding custom sponsorship / consulting arrangements. Get in touch on [Twitter](https://twitter.com/lukaszholeczek).
+We want it to be in this directory instead:
+`libs\mylib\src\lib\components\header`
+
+So, we just move it and fix the references in mylib.module.ts file.
+
+If we want better referencing link, we create this file:
+`libs\mylib\src\lib\index.ts`
+
+and inside it we put:
+
+`export * from './components/header/header.component';`
+
+then in mylib.module.ts file, we can import header commponent as follows:
+import { HeaderComponent } from '.';
+
+
+## Code scaffolding
+
+Run `ng generate component component-name --app=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+- First, you need to update the properties in enviroment.prod.ts file of the project you want to build.
+
+- Run `ng build --app=myapp` or `ng build myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+If your project is deployed in server, let's say on this path /ScadaWeb, then pass the following arguments during the build:
+`ng build scada-web-viewer --prod --deploy-url /ScadaWeb/ --base-href /ScadaWeb`
+
+Build productivity:
+`ng build productivity-web --prod --deploy-url /Productivity/ --base-href /Productivity`
+
+Build vams:
+`ng build vams --prod --deploy-url /vams/ --base-href /vams`
+
+Build pipelines:
+`ng build pipeline-web --prod --deploy-url /pipelines/ --base-href /pipelines`
+
+There's easier way tp build and deploy which is using `make` file commands which you can read about.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

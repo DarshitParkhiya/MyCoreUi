@@ -41,6 +41,7 @@ import { AppRoutingModule } from './app.routing';
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
     AppHeaderModule,
+
     AppSidebarModule,
     PerfectScrollbarModule
   ],
