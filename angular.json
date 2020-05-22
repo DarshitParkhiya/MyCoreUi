@@ -325,6 +325,127 @@
           }
         }
       }
+    },
+    "teaching-staff": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/teaching-staff",
+      "sourceRoot": "apps/teaching-staff/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/teaching-staff",
+            "index": "apps/teaching-staff/src/index.html",
+            "main": "apps/teaching-staff/src/main.ts",
+            "polyfills": "apps/teaching-staff/src/polyfills.ts",
+            "tsConfig": "apps/teaching-staff/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/teaching-staff/src/favicon.ico",
+              "apps/teaching-staff/src/assets"
+            ],
+            "styles": [
+              "apps/teaching-staff/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/teaching-staff/src/environments/environment.ts",
+                  "with": "apps/teaching-staff/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "teaching-staff:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "teaching-staff:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "teaching-staff:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/teaching-staff/src/test.ts",
+            "polyfills": "apps/teaching-staff/src/polyfills.ts",
+            "tsConfig": "apps/teaching-staff/tsconfig.spec.json",
+            "karmaConfig": "apps/teaching-staff/karma.conf.js",
+            "assets": [
+              "apps/teaching-staff/src/favicon.ico",
+              "apps/teaching-staff/src/assets"
+            ],
+            "styles": [
+              "apps/teaching-staff/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/teaching-staff/tsconfig.app.json",
+              "apps/teaching-staff/tsconfig.spec.json",
+              "apps/teaching-staff/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/teaching-staff/e2e/protractor.conf.js",
+            "devServerTarget": "teaching-staff:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "teaching-staff:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "coreui",
